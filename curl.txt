@@ -1,0 +1,8 @@
+https://docs.feathersjs.com/api/client/rest.html#extending-rest-clients
+1. Get an JWT access token
+curl -H "Content-Type: application/json" -X POST -d '{"strategy":"local","email":"user@buschegroup.com","password":"password"}' http://localhost:3030/authentication
+2. Use that access token on subsequent calls
+curl -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE1ODY5NzU5MzUsImV4cCI6MTU4NzA2MjMzNSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiMSIsImp0aSI6ImU3ZTliZjg2LWE5YTItNDU3YS1iMThiLTFhNTMwNDY1MjA2ZSJ9.pd1VRyBTvbseNBGen12mGFlZjo1So8JvqDa-CsjYQOQ" -X POST http://localhost:3030/authentication
+3. Get all users
+curl -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE1ODY5NzU5MzUsImV4cCI6MTU4NzA2MjMzNSwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiMSIsImp0aSI6ImU3ZTliZjg2LWE5YTItNDU3YS1iMThiLTFhNTMwNDY1MjA2ZSJ9.pd1VRyBTvbseNBGen12mGFlZjo1So8JvqDa-CsjYQOQ" -X GET http://localhost:3030/users
+4. Subsequent authentication
