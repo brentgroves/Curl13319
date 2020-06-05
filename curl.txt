@@ -19,3 +19,6 @@ curl --location --request POST 'http://localhost:3030/users' \
     "isAdmin": true,
     "roles": [ "Admin", "Manager", "Quality"]	
 }'
+
+5. siege -c2 -t30S 'http://localhost:3030/maria200221 POST {"startDate":"2020-05-31 00:00:00","endDate": "2020-06-06 00:00:00"}' --content-type 'application/json'
+6. siege -c10 -t1M http://localhost:3030/mysql200221?$table=rpt06047&$limit=10&$skip=0
